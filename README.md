@@ -3,4 +3,8 @@
 
 
 ### `npm start`
+## Stack 
+- axios
+- node sass
+
 

@@ -1,0 +1,100 @@
+@import './libs/normalize';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap:10px;
+  grid-row-gap: 20px;
+  @media (max-width: 855px){
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  @media (max-width: 655px){
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap:50px;
+
+  }
+
+  @media (max-width: 450px){
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+}
+
+.title{
+  margin-bottom: 50px;
+}
+
+.film__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+
+    &-image{
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    &-title{
+      margin-bottom: 20px;
+    }
+
+    &-description{
+      margin-bottom: 20px;
+    }
+  
+}
+
+.comment{
+  margin-bottom: 50px;
+
+  p{
+    color: rgb(147, 147, 147);
+    word-break:break-all;
+  }
+}
+
+input{
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+button{
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}

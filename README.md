@@ -3,7 +3,6 @@
 
 
 ### `npm start`
-<hr/>
 ## Stack 
 - axios
 - node sass

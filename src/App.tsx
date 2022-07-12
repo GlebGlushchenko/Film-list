@@ -22,7 +22,7 @@ const App: React.FC = () => {
         setIsLoading(false);
       });
     } catch (error) {
-      console.error(error);
+      console.log(error);
     }
   }, [currentPage]);
 
@@ -73,9 +73,8 @@ const App: React.FC = () => {
               return (
                 <ul key={obj.id} className="film__card">
                   <div>
-                    {" "}
                     <li className="film__card-item">
-                      <img className="film__card-image" src={obj.medium_cover_image} alt="" />
+                      <img className="film__card-image" src={obj.medium_cover_image} alt="Poster" />
                     </li>
                     <li>
                       <h3 className="film__card-title">{obj.title}</h3>

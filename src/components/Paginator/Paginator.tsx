@@ -1,4 +1,5 @@
 import React from "react";
+import { calcPageNumber } from "../../utils/calcPageNumber";
 
 import styles from "../Paginator.module.scss";
 
@@ -17,14 +18,7 @@ const Paginator: React.FC<Props> = ({
   currentPage,
   setCurrentPage,
 }) => {
-  const pageNumber = [];
-  for (let i = 1; i <= Math.ceil(filmPage / totalFilms); i++) {
-    pageNumber.push(i);
-  }
-  const currentPageFirst = currentPage - 5 < 0 ? 0 : currentPage - 5;
-  const currentPageLast = currentPageFirst + 5;
-
-  const cutPageNumber = pageNumber.slice(currentPageFirst, currentPageLast);
+  const cutPageNumber = calcPageNumber(filmPage, totalFilms, currentPage);
 
   const onClickPref = () => {
     if (currentPage !== 1) {
